@@ -57,7 +57,7 @@ cubism_contextPrototype.cm = function(host, tenant, token) {
       var points = (stop - start) / step;
       // Hard code 30s min
       step = Math.min(step, 30000);
-      wrapJsonP(host + "/v1.0/" + tenant + "/entities/" + expression[0] + "/checks/" + expression[1] + "/metrics/" + expression[2]
+      wrapJsonP(host + "/v1.0/" + tenant + "/entities/" + expression[0] + "/checks/" + expression[1] + "/metrics/" + expression[2] + '/plot'
           + "?from=" + start.getTime()
           + "&to=" + stop.getTime()
           + "&points=" + points, function(err, data) {
